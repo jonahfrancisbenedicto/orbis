@@ -1,8 +1,17 @@
 # Newton's Law of Gravitation
-# F = G*m_1*m_2/r**2
+# F_n = G*m_1*m_2/r**2
 
 # Newton's Second Law
-# F = m*a
+# F_net = m*a
+# a = F_net/m
+
+# Position, Velocity and Acceleration
+
+# Euler Method
+# a = dv/dt
+# v = dx/dt
+# v_new = v_old + a_new * dt
+# x_new = x_old + v_new * dt
 
 # Imports
 import math
@@ -50,3 +59,8 @@ class Planet:
 
     def set_acceleration(acceleration: tuple[float, float, float]) -> None:
         self._acceleration = acceleration
+
+
+class System:
+    def init(self) -> None:
+        pass

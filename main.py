@@ -194,7 +194,7 @@ def main() -> None:
 
     system = System(planets=planets)
 
-    delta_time = 3600
+    delta_time = 3600*10
     steps_per_frame = 12
 
     fig = plt.figure(figsize=(8, 8))
@@ -205,7 +205,7 @@ def main() -> None:
     ax.set_ylabel("Y (m)")
     ax.set_zlabel("Z (m)")
 
-    limit = 3e11 #5e12
+    limit = 5e12 #3e11
 
     ax.set_xlim(-limit, limit)
     ax.set_ylim(-limit, limit)

@@ -3,16 +3,23 @@ Simulates how planets move and interact using Newton's law of gravity.
 
 ## Math
 
-Newton's Law of Universal Gravitation
+### Newton's Law of Universal Gravitation
 ```math
 F_{1 \to 2} = \frac{Gm_1m_2}{r_{1 \to 2}^2}
 ```
+where:
+- F is force
+- G is universal gravitational constant
+- m is mass
+- r is distance
 
+**Calculate net force:**
 ```math
 F_{\text{net}_k} = \sum_i^{n | n \neq k}{\frac{Gm_km_i}{r_{k \to i}^2}}
 ```
 
-Newton's Second Law of Motion
+### Newton's Second Law of Motion
+**Calculate acceleration:**
 ```math
 \begin{aligned}
     F_{\text{net}} &= ma \\
@@ -20,19 +27,31 @@ Newton's Second Law of Motion
     a &= \frac{F_{\text{net}}}{m}
 \end{aligned}
 ```
+where:
+- $F$ is net force
+- $m$ is mass
+- $a$ is acceleration
 
-Acceleration
+### Acceleration
+**Calculate velocity:**
 ```math
 \begin{aligned}
     a &= \frac{dv}{dt} \\
     adt &= dv \\
     dv &= adt \\
     v_f - v_i &= adt \\
-    v_f &= adt + v_i
+    v_f &= adt + v_i \\
 \end{aligned}
 ```
+where:
+- $a$ is acceleration
+- $v_f$ is final velocity
+- $v_i$ is initial velocity
+- $dt$ is change in time
 
-Velocity
+
+### Velocity
+**Calculate position:**
 ```math
 \begin{aligned}
     v &= \frac{dx}{dt} \\
@@ -41,6 +60,21 @@ Velocity
     x_f - x_i &= vdt \\
     x_f &= vdt + x_i
 \end{aligned}
+```
+where:
+- $v$ is velocity
+- $x_f$ is final position
+- $x_i$ is initial position
+- $dt$ is change in time
+
+### Direction
+```math
+\vec{AB} = (x_B - x_A, y_B - y_A, z_B - z_A)
+```
+
+Distance
+```math
+
 ```
 
 ## Contributions

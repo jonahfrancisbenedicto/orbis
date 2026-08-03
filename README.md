@@ -67,16 +67,22 @@ where:
 - $x_i$ is initial position
 - $dt$ is change in time
 
-### Calculate direction
+### Direction and distance
 Suppose $U(u_1, u_2, u_3)$ and $V(v_1, v_2, v_3)$.
+
+#### Calculate direction
 ```math
 \vec{UV} = (v_1 - u_1, v_2 - u_2, v_3 - u_3)
 ```
 
-### Calculate distance
-Suppose $U(u_1, u_2, u_3)$ and $V(v_1, v_2, v_3)$.
+#### Calculate distance
 ```math
 \lVert \vec{UV} \rVert = \sqrt{(v_1 - u_1)^2 + (v_2 - u_2)^2 + (v_3 - u_3)^2}
+```
+
+#### Calculate Unit Direction
+```math
+\hat{UV}=\frac{\vec{UV}}{\lVert \vec{UV} \rVert}
 ```
 
 ## Contributions

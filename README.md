@@ -3,7 +3,8 @@ Simulates how planets move and interact using Newton's law of gravity.
 
 ## Math
 
-### Newton's Law of Universal Gravitation
+### Calculate force
+The force can be derived using Newton's Law of Universal Gravitation.
 ```math
 F_{1 \to 2} = \frac{Gm_1m_2}{r_{1 \to 2}^2}
 ```
@@ -13,13 +14,12 @@ where:
 - m is mass
 - r is distance
 
-Calculate net force:
 ```math
 F_{\text{net}_k} = \sum_i^{n | n \neq k}{\frac{Gm_km_i}{r_{k \to i}^2}}
 ```
 
-### Newton's Second Law of Motion
-Calculate acceleration:
+### Calculate acceleration 
+The acceleration can be derived using Newton's Second Law of Motion.
 ```math
 \begin{aligned}
     F_{\text{net}} &= ma \\
@@ -32,8 +32,8 @@ where:
 - $m$ is mass
 - $a$ is acceleration
 
-### Acceleration
-Calculate velocity:
+### Calculate velocity
+The velocity can be derived using the relationship between acceleration and velocity.
 ```math
 \begin{aligned}
     a &= \frac{dv}{dt} \\
@@ -50,8 +50,8 @@ where:
 - $dt$ is change in time
 
 
-### Velocity
-Calculate position:
+### Calculate position
+The position can be derived using the relationship between velocity and position.
 ```math
 \begin{aligned}
     v &= \frac{dx}{dt} \\
@@ -67,13 +67,13 @@ where:
 - $x_i$ is initial position
 - $dt$ is change in time
 
-### Direction
-Suppose $A=(x_A, y_A, z_A)$ and $B=(x_B, y_B, z_B)$.
+### Calculate direction
+Suppose $A = (x_A, y_A, z_A)$ and $B = (x_B, y_B, z_B)$.
 ```math
 \vec{AB} = (x_B - x_A, y_B - y_A, z_B - z_A)
 ```
 
-## Distance
+### Calculate distance
 ```math
 
 ```

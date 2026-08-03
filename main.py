@@ -1,5 +1,7 @@
 # Imports
 import math
+import matplotlib.pyplot as plt
+from matplotlib.animation import FuncAnimation
 
 # Planet Class
 class Planet:
@@ -101,7 +103,7 @@ class System:
             acceleration_y = net_force_y / mass
             acceleration_z = net_force_z / mass
 
-            # Calculate Velocities 
+            # Calculate Velocities
             velocity_x, velocity_y, velocity_z = planet.get_velocity()
             velocity_x += acceleration_x * delta_time
             velocity_y += acceleration_y * delta_time
@@ -125,8 +127,95 @@ class System:
 
 # Main Program
 def main() -> None:
-    pass
+    EARTH_MASS: float = 5.972e24
+    EARTH_DISTANCE: float = 1.495978707e11
+    EARTH_VELOCITY: float = 2.978e4
 
+    MARS_MASS: float = 6.417e23
+    MARS_DISTANCE: float = 2.279e11
+    MARS_VELOCITY: float = 2.4007e4
+    MARS_VERTICAL_DISTANCE: float = 7.4e9
+
+    SUN_MASS: float = 1.9885e30
+
+    earth = Planet(mass=EARTH_MASS, position=(EARTH_DISTANCE, 0, 0), velocity=(0, EARTH_VELOCITY, 0))
+    mars = Planet(mass=MARS_MASS, position=(MARS_DISTANCE, MARS_VERTICAL_DISTANCE, 0), velocity=(0, MARS_VELOCITY, 0))
+    sun = Planet(mass=SUN_MASS, position=(0, 0, 0), velocity=(0, 0, 0))
+
+    planets = [sun, earth, mars]
+
+
+    system = System(planets=planets)
+
+    delta_time = 3600
+    steps_per_frame = 12
+
+    colours = ["gold", "royalblue", "firebrick"]
+
+    fig = plt.figure(figsize=(8, 8))
+
+    ax = fig.add_subplot(111, projection="3d")
+
+    ax.set_xlabel("X (m)")
+    ax.set_ylabel("Y (m)")
+    ax.set_zlabel("Z (m)")
+
+    limit = 2.6e11
+
+    ax.set_xlim(-limit, limit)
+    ax.set_ylim(-limit, limit)
+    ax.set_zlim(-limit, limit)
+ 
+    initial_positions_x = [planet.get_position()[0] for planet in system.get_planets()]
+    initial_positions_y = [planet.get_position()[1] for planet in system.get_planets()]
+    initial_positions_z = [planet.get_position()[2] for planet in system.get_planets()]
+
+    scatter = ax.scatter(initial_positions_x, initial_positions_y, initial_positions_z, s=50, c=colours)
+ 
+    trails = [ax.plot([], [], [], color=colour)[0] for colour in colours]
+    trail_history = [([], [], []) for _ in planets]
+    trail_length = 200
+ 
+    def update(frame):
+        for _ in range(steps_per_frame):
+           system.step(delta_time)
+
+        positions_x = []
+        positions_y = []
+        positions_z = []
+
+        for planet in system.get_planets():
+            position_x, position_y, position_z = planet.get_position()
+
+            positions_x.append(position_x)
+            positions_y.append(position_y)
+            positions_z.append(position_z)
+
+        scatter._offsets3d = (positions_x, positions_y, positions_z)
+ 
+        for i, (x, y, z) in enumerate(zip(positions_x, positions_y, positions_z)):
+            history_x, history_y, history_z = trail_history[i]
+
+            history_x.append(x)
+            history_y.append(y)
+            history_z.append(z)
+
+            del history_x[:-trail_length]
+            del history_y[:-trail_length]
+            del history_z[:-trail_length]
+
+            trails[i].set_data_3d(history_x, history_y, history_z)
+ 
+        return scatter,
+ 
+    animation = FuncAnimation(
+        fig,
+        update,
+        interval=20,
+        blit=False,
+    )
+
+    plt.show()
 
 if __name__ == "__main__":
     main()

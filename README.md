@@ -74,6 +74,7 @@ Suppose $U(u_1, u_2, u_3)$ and $V(v_1, v_2, v_3)$.
 ```
 
 ### Calculate distance
+Suppose $U(u_1, u_2, u_3)$ and $V(v_1, v_2, v_3)$.
 ```math
 \lVert \vec{UV} \rVert = \sqrt{(v_1 - u_1)^2 + (v_2 - u_2)^2 + (v_3 - u_3)^2}
 ```

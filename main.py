@@ -205,7 +205,7 @@ def main() -> None:
     ax.set_ylabel("Y (m)")
     ax.set_zlabel("Z (m)")
 
-    limit = 5e12
+    limit = 3e11 #5e12
 
     ax.set_xlim(-limit, limit)
     ax.set_ylim(-limit, limit)
@@ -256,10 +256,12 @@ def main() -> None:
     animation = FuncAnimation(
         fig,
         update,
+        frames=200,
         interval=20,
         blit=False,
     )
 
+    animation.save("orbit.gif", writer="pillow", fps=30)
     plt.show()
 
 if __name__ == "__main__":

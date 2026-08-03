@@ -87,6 +87,20 @@ Suppose $u(u_1, u_2, u_3)$ and $v(v_1, v_2, v_3)$.
 \hat{uv}=\frac{\vec{uv}}{\lVert \vec{uv} \rVert}
 ```
 
+## Research
+
+| Body    | Mass (kg)     | Distance (m)      | Velocity (m/s)  | Vertical Distance (m)    | Inclination |
+|---------|---------------|-------------------|-----------------|--------------------------|-------------|
+| Sun     | 1.9885e30     | 0                 | 0               | 0                        | 0           |
+| Mercury | 3.3011e23     | 5.79e10           | 4.74e4          | 7.1e9                    | 7.00°       |
+| Venus   | 4.8675e24     | 1.082e11          | 3.502e4         | 6.4e9                    | 3.39°       |
+| Earth   | 5.972e24      | 1.495978707e11    | 2.978e4         | 0                        | 0°          |
+| Mars    | 6.417e23      | 2.279e11          | 2.4007e4        | 7.4e9                    | 1.85°       |
+| Jupiter | 1.898e27      | 7.785e11          | 1.307e4         | 1.8e10                   | 1.30°       |
+| Saturn  | 5.683e26      | 1.4335e12         | 9.69e3          | 6.2e10                   | 2.49°       |
+| Uranus  | 8.681e25      | 2.8725e12         | 6.81e3          | 3.9e10                   | 0.77°       |
+| Neptune | 1.024e26      | 4.4951e12         | 5.43e3          | 1.4e11                   | 1.77°       |
+
 ## Contributions
 This repository is maintained by @jonahfrancisbenedicto
 1. **Fork** the Project

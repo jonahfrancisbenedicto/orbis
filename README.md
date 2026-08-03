@@ -13,13 +13,13 @@ where:
 - m is mass
 - r is distance
 
-**Calculate net force:**
+Calculate net force:
 ```math
 F_{\text{net}_k} = \sum_i^{n | n \neq k}{\frac{Gm_km_i}{r_{k \to i}^2}}
 ```
 
 ### Newton's Second Law of Motion
-**Calculate acceleration:**
+Calculate acceleration:
 ```math
 \begin{aligned}
     F_{\text{net}} &= ma \\
@@ -33,7 +33,7 @@ where:
 - $a$ is acceleration
 
 ### Acceleration
-**Calculate velocity:**
+Calculate velocity:
 ```math
 \begin{aligned}
     a &= \frac{dv}{dt} \\
@@ -51,7 +51,7 @@ where:
 
 
 ### Velocity
-**Calculate position:**
+Calculate position:
 ```math
 \begin{aligned}
     v &= \frac{dx}{dt} \\
@@ -68,11 +68,12 @@ where:
 - $dt$ is change in time
 
 ### Direction
+Suppose $A=(x_A, y_A, z_A)$ and $B=(x_B, y_B, z_B)$.
 ```math
 \vec{AB} = (x_B - x_A, y_B - y_A, z_B - z_A)
 ```
 
-Distance
+## Distance
 ```math
 
 ```

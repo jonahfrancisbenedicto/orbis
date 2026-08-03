@@ -46,18 +46,20 @@ class System:
     # Methods
     def step():
         # Calculate Forces
-        forces: list[float] = []
+        forces: list[float] = [0] * len(self.get_planets())
         for i, planet_i in enumerate(self.get_planets()):
             for j, planet_j in enumerate(self.get_planets()):
                 if i == j:
                     continue
-                forces[i] += (
-                    _GRAVITATION * planet_i.get_mass() * planet_j * get_mass() / 
-                    math.sqrt(
-                        (planet_j.get_position()[0] + planet_i.get_position()[0])**2 +
-                        (planet_j.get_position()[1] + planet_i.get_position()[1])**2 +
-                        (planet_j.get_position()[2] + planet_i.get_position()[2])**2
-                    )
+                planet_i_position = planet_i.get_position()
+                planet_j_position = planet_j.get_position()
+                distance = math.sqrt(
+                    (planet_j_position[0] - planet_i_position[0])**2 +
+                    (planet_j_position[1] -  planet_i_position[1])**2 +
+                    (planet_j_position[2] - planet_i_position[2])**2
+                )
+                forces[i] = (
+                    _GRAVITATION * planet_i.get_mass() * planet_j.get_mass() / distance ** 2
                 )
 
         ## Calculate Direction

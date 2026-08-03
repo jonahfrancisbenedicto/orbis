@@ -1,10 +1,6 @@
 # Imports
 import math
 
-
-# Constants
-ZERO: tuple[float, float, float] = (0,0,0)
-
 # Planet Class
 class Planet:
 
@@ -37,6 +33,46 @@ class Planet:
     def set_velocity(self, velocity: tuple[float, float, float]) -> None:
         self._velocity = velocity
 
+
+# System Class
 class System:
-    def __init__(self) -> None:
+
+    # Constructor Method
+    def __init__(self, planets: list["Planet"]) -> None:
+        self._planets = planets
+
+    # Methods
+    def step():
+        # Calculate Forces
+
+        ## Calculate Direction
+
+        ## Calculate Distance
+
+        ## Calculate Magnitude
+
+        ## Calculate Unit Direction 
+
+        ## Calculate Force
+
+        # Calculate Accelerations
+
+        # Update Velocities
+
+        # Update Positions
+
         pass
+
+    # Getter and Setter Methods
+    def get_planets(self) -> list["Planet"]:
+        return self._planets
+
+    def set_planets(self, planets: list["Planet"]) -> None:
+        self._planets = planets
+
+# Main Program
+def main() -> None:
+    pass
+
+if __name__ == "__main__":
+    main()

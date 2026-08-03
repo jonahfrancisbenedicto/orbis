@@ -1,4 +1,6 @@
 # Orbis
+![Orbit](./orbit.gif)
+
 Simulates how planets move and interact using Newton's law of gravity.
 
 ## Math

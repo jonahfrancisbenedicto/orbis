@@ -45,33 +45,52 @@ class System:
 
     # Methods
     def step():
-        # Calculate Net Forces
-        net_forces: list[float] = [0] * len(self.get_planets())
-        for i, planet_i in enumerate(self.get_planets()):
-            for j, planet_j in enumerate(self.get_planets()):
+
+        # Calculate Forces
+        forces = [(0.0, 0.0, 0.0) for _ in self._planets]
+
+        for i, planet_i in enumerate(self._planets):
+            xi, yi, zi = planet_i.get_position()
+
+            for j, planet_j in enumerate(self._planets):
                 if i == j:
                     continue
-                planet_i_position = planet_i.get_position()
-                planet_j_position = planet_j.get_position()
-                distance = math.sqrt(
-                    (planet_j_position[0] - planet_i_position[0])**2 +
-                    (planet_j_position[1] -  planet_i_position[1])**2 +
-                    (planet_j_position[2] - planet_i_position[2])**2
+
+                xj, yj, zj = planet_j.get_position()
+                
+                displacement_x = xj - xi
+                displacement_y = yj - yi
+                displacement_z = zj - zi
+
+                # Distance
+                distance = math.sqrt(dx * dx + dy * dy + dz * dz)
+
+                if distance == 0:
+                    continue
+
+                # Newton's law of gravitation
+                force_magnitude = (
+                    GRAVITATION * planet_i.get_mass() * planet_j.get_mass() / distance ** 2
                 )
-                net_forces[i] = net_forces[i] + (
-                    _GRAVITATION * planet_i.get_mass() * planet_j.get_mass() / distance ** 2
+
+                # Unit direction
+                unit_x_direction = dx / distance
+                uy = dy / distance
+                uz = dz / distance
+
+                # Force 
+                force_x = force_magnitude * ux
+                force_y = force_magnitude * uy
+                force_z = force_magnitude * uz
+
+                # Accumulate net force
+                current_force_x, current_force_y, current_force_z = forces[i]
+
+                forces[i] = (
+                    current_fx + fx,
+                    current_fy + fy,
+                    current_fz + fz,
                 )
-
-        ## Calculate Direction
-
-
-        ## Calculate Distance
-
-        ## Calculate Magnitude
-
-        ## Calculate Unit Direction 
-
-        ## Calculate Force
 
         # Calculate Accelerations
 

@@ -75,7 +75,7 @@ Suppose $u = (u_1, u_2, u_3)$ and $v = (v_1, v_2, v_3)$.
 
 ### Calculate distance
 ```math
-||u-v|| =
+\lVert u - v \rVert = \sqrt{(v_1 - u_1)^2 + (v_2 - u_2)^2 + (v_3 - u_3)^2}
 ```
 
 ## Contributions

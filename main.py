@@ -45,7 +45,7 @@ class System:
 
     # Methods
     def step():
-        # Calculate Forces
+        # Calculate Net Forces
         net_forces: list[float] = [0] * len(self.get_planets())
         for i, planet_i in enumerate(self.get_planets()):
             for j, planet_j in enumerate(self.get_planets()):
@@ -58,7 +58,7 @@ class System:
                     (planet_j_position[1] -  planet_i_position[1])**2 +
                     (planet_j_position[2] - planet_i_position[2])**2
                 )
-                net_forces[i] = (
+                net_forces[i] = net_forces[i] + (
                     _GRAVITATION * planet_i.get_mass() * planet_j.get_mass() / distance ** 2
                 )
 

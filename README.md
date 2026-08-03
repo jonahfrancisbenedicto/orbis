@@ -9,7 +9,7 @@ F_{1->2} = \frac{Gm_1m_2}{r_{1->2}^2}
 ```
 
 ```math
-F_{\text{1}} = \sum_i^{n-1}{\frac{Gm_1m_i}{r_{1->i}^2}
+F_{\text{1}} = \sum_i^{n-1}{\frac{Gm_1m_i}{r_{1->i}^2}}
 ```
 
 Newton's Second Law of Motion

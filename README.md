@@ -70,7 +70,7 @@ where:
 ### Calculate direction
 Suppose $u = (u_1, u_2, u_3)$ and $v = (v_1, v_2, v_3)$.
 ```math
-\vec{uv} = (v_1 - u_1, v_2 - u_2, v_3 - u_3)
+\vec{UV} = (v_1 - u_1, v_2 - u_2, v_3 - u_3)
 ```
 
 ### Calculate distance

@@ -127,6 +127,16 @@ class System:
 
 # Main Program
 def main() -> None:
+    MERCURY_MASS: float = 3.3011e23
+    MERCURY_DISTANCE: float = 5.79e10
+    MERCURY_VELOCITY: float = 4.74e4
+    MERCURY_VERTICAL_DISTANCE: float = 7.1e9
+
+    VENUS_MASS: float = 4.8675e24
+    VENUS_DISTANCE: float = 1.082e11
+    VENUS_VELOCITY: float = 3.502e4
+    VENUS_VERTICAL_DISTANCE: float = 6.4e9
+
     EARTH_MASS: float = 5.972e24
     EARTH_DISTANCE: float = 1.495978707e11
     EARTH_VELOCITY: float = 2.978e4
@@ -136,21 +146,56 @@ def main() -> None:
     MARS_VELOCITY: float = 2.4007e4
     MARS_VERTICAL_DISTANCE: float = 7.4e9
 
+    JUPITER_MASS: float = 1.898e27
+    JUPITER_DISTANCE: float = 7.785e11
+    JUPITER_VELOCITY: float = 1.307e4
+    JUPITER_VERTICAL_DISTANCE: float = 1.8e10
+
+    SATURN_MASS: float = 5.683e26
+    SATURN_DISTANCE: float = 1.4335e12
+    SATURN_VELOCITY: float = 9.69e3
+    SATURN_VERTICAL_DISTANCE: float = 6.2e10
+
+    URANUS_MASS: float = 8.681e25
+    URANUS_DISTANCE: float = 2.8725e12
+    URANUS_VELOCITY: float = 6.81e3
+    URANUS_VERTICAL_DISTANCE: float = 3.9e10
+
+    NEPTUNE_MASS: float = 1.024e26
+    NEPTUNE_DISTANCE: float = 4.4951e12
+    NEPTUNE_VELOCITY: float = 5.43e3
+    NEPTUNE_VERTICAL_DISTANCE: float = 1.4e11
+
     SUN_MASS: float = 1.9885e30
 
+    mercury = Planet(mass=MERCURY_MASS, position=(MERCURY_DISTANCE, MERCURY_VERTICAL_DISTANCE, 0), velocity=(0, MERCURY_VELOCITY, 0))
+    venus = Planet(mass=VENUS_MASS, position=(VENUS_DISTANCE, VENUS_VERTICAL_DISTANCE, 0), velocity=(0, VENUS_VELOCITY, 0))
     earth = Planet(mass=EARTH_MASS, position=(EARTH_DISTANCE, 0, 0), velocity=(0, EARTH_VELOCITY, 0))
     mars = Planet(mass=MARS_MASS, position=(MARS_DISTANCE, MARS_VERTICAL_DISTANCE, 0), velocity=(0, MARS_VELOCITY, 0))
+    jupiter = Planet(mass=JUPITER_MASS, position=(JUPITER_DISTANCE, JUPITER_VERTICAL_DISTANCE, 0), velocity=(0, JUPITER_VELOCITY, 0))
+    saturn = Planet(mass=SATURN_MASS, position=(SATURN_DISTANCE, SATURN_VERTICAL_DISTANCE, 0), velocity=(0, SATURN_VELOCITY, 0))
+    uranus = Planet(mass=URANUS_MASS, position=(URANUS_DISTANCE, URANUS_VERTICAL_DISTANCE, 0), velocity=(0, URANUS_VELOCITY, 0))
+    neptune = Planet(mass=NEPTUNE_MASS, position=(NEPTUNE_DISTANCE, NEPTUNE_VERTICAL_DISTANCE, 0), velocity=(0, NEPTUNE_VELOCITY, 0))
     sun = Planet(mass=SUN_MASS, position=(0, 0, 0), velocity=(0, 0, 0))
 
-    planets = [sun, earth, mars]
+    planets = [sun, mercury, venus, earth, mars, jupiter, saturn, uranus, neptune]
 
+    colours = [
+        "gold",
+        "gray",
+        "orange",
+        "royalblue",
+        "firebrick",
+        "peru",
+        "khaki",
+        "lightblue",
+        "darkblue",
+    ]
 
     system = System(planets=planets)
 
     delta_time = 3600
     steps_per_frame = 12
-
-    colours = ["gold", "royalblue", "firebrick"]
 
     fig = plt.figure(figsize=(8, 8))
 
@@ -160,7 +205,7 @@ def main() -> None:
     ax.set_ylabel("Y (m)")
     ax.set_zlabel("Z (m)")
 
-    limit = 2.6e11
+    limit = 5e12
 
     ax.set_xlim(-limit, limit)
     ax.set_ylim(-limit, limit)

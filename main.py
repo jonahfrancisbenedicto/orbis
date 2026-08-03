@@ -70,10 +70,7 @@ class System:
 
                 # Newton's law of gravitation
                 force_magnitude = (
-                    self._GRAVITATIONAL_CONSTANT
-                    * planet_i.get_mass()
-                    * planet_j.get_mass()
-                    / distance ** 2
+                    self._GRAVITATIONAL_CONSTANT * planet_i.get_mass() * planet_j.get_mass() / distance ** 2
                 )
 
                 # Unit direction

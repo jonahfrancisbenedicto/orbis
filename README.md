@@ -80,9 +80,9 @@ Suppose $u(u_1, u_2, u_3)$ and $v(v_1, v_2, v_3)$.
 \lVert \vec{uv} \rVert = \sqrt{(v_1 - u_1)^2 + (v_2 - u_2)^2 + (v_3 - u_3)^2}
 ```
 
-#### Calculate Unit Direction
+#### Calculate unit direction
 ```math
-\hat{UV}=\frac{\vec{UV}}{\lVert \vec{UV} \rVert}
+\hat{uv}=\frac{\vec{uv}}{\lVert \vec{uv} \rVert}
 ```
 
 ## Contributions

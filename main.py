@@ -37,6 +37,8 @@ class Planet:
 # System Class
 class System:
 
+    _GRAVITATION: float = 6.7
+
     # Constructor Method
     def __init__(self, planets: list["Planet"]) -> None:
         self._planets = planets
@@ -44,8 +46,22 @@ class System:
     # Methods
     def step():
         # Calculate Forces
+        forces: list[float] = []
+        for i, planet_i in enumerate(self.get_planets()):
+            for j, planet_j in enumerate(self.get_planets()):
+                if i == j:
+                    continue
+                forces[i] += (
+                    _GRAVITATION * planet_i.get_mass() * planet_j * get_mass() / 
+                    math.sqrt(
+                        (planet_j.get_position()[0] + planet_i.get_position()[0])**2 +
+                        (planet_j.get_position()[1] + planet_i.get_position()[1])**2 +
+                        (planet_j.get_position()[2] + planet_i.get_position()[2])**2
+                    )
+                )
 
         ## Calculate Direction
+
 
         ## Calculate Distance
 
@@ -57,9 +73,9 @@ class System:
 
         # Calculate Accelerations
 
-        # Update Velocities
+        # Calculate Velocities
 
-        # Update Positions
+        # Calculate Positions
 
         pass
 

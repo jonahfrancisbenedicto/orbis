@@ -222,6 +222,12 @@ def main() -> None:
     trail_length = 200
  
     def update(frame):
+
+        azimuth_angle = frame * 0.1 
+        elevation_angle = 30 + frame * 0.1
+
+        ax.view_init(elev=elevation_angle, azim=azimuth_angle)
+
         for _ in range(steps_per_frame):
            system.step(delta_time)
 
@@ -251,12 +257,12 @@ def main() -> None:
 
             trails[i].set_data_3d(history_x, history_y, history_z)
  
-        return scatter,
+        return scatter, ax
  
     animation = FuncAnimation(
         fig,
         update,
-        frames=200,
+        frames=200*2,
         interval=20,
         blit=False,
     )

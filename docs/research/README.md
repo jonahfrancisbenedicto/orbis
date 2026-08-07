@@ -19,9 +19,11 @@ In a system with multiple objects in 3-dimensions: $F_i=\sum_{j \neq i}{G\frac{m
 
 Newton's second law of motion can be used to determine the **acceleration** of the object: $a=\frac{F_{\text{net}}{m}$
 ```math
-F_{\text{net}}&=ma \\
-\frac{F_{\text{net}}}{m}&=a \\
-\therefore \ a&=\frac{F_{\text{net}}}{m}
+\begin{aligned}
+    F_{\text{net}}&=ma \\
+    \frac{F_{\text{net}}}{m}&=a \\
+    \therefore \ a&=\frac{F_{\text{net}}}{m}
+\end{aligned}
 ```
 
 In a system with multiple objects in 3-dimensions: $a_i=\sum_{j \neq i}{G\frac{m_j}{r^2_{ij}}\hat{r}_{ij}}$

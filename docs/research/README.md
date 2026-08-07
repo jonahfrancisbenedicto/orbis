@@ -95,7 +95,7 @@ Suppose the initial velocity is $u$ and final velocity is $v$.
 - $a$ is the acceleration of the object in $\text{m} \text{s}^{-2}$
 - $s$ is the displacement of the object in $\text{m}$
 
-The **fourth kinematic equation**: $s=\frac{1}{2}(u+v)t
+The **fourth kinematic equation**: $s=\frac{1}{2}(u+v)t$
 - $v$ is the final velocity of the object in $\text{m} \text{s}^{-1}$
 - $u$ is the inital velocity of the object in $\text{m} \text{s}^{-1}$
 - $t$ is the change in time in $\text{s}$

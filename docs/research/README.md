@@ -9,11 +9,22 @@
 - $m$ is the mass of the object
 - $r$ is the distance between the objects
 
+In a system with multiple objects in 3-dimensions: $F_i=\sum_{j \neq i}{G\frac{m_im_j}{r^2_{ij}}}\hat{r}_{ij}$
+
 ### Newton's Second Law of Motion
 **Newton's second law of motion** $F_{\text{net}}=ma$:
 - $F_{\text{net}}$ is the net force acting on the object in $\text{kg} \text{m} \text{s}^-2$
 - $m$ is the mass of the object in $\text{kg}$
 - $a$ is the acceleration of the object in $\text{m} \text{s}^{-1}$
+
+Newton's second law of motion can be used to determine the **acceleration** of the object: $a=\frac{F_{\text{net}}{m}$
+```math
+F_{\text{net}}&=ma \\
+\frac{F_{\text{net}}}{m}&=a \\
+\therefore \ a&=\frac{F_{\text{net}}}{m}
+```
+
+In a system with multiple objects in 3-dimensions: $a_i=\sum_{j \neq i}{G\frac{m_j}{r^2_{ij}}}\hat{r}_{ij}$
 
 ### Kinematic Equations
 Acceleration is the change in velocity over time $a=\frac{dv}{dt}$:
@@ -100,3 +111,12 @@ The **fourth kinematic equation**: $s=\frac{1}{2}(u+v)t$
 - $u$ is the inital velocity of the object in $\text{m} \text{s}^{-1}$
 - $t$ is the change in time in $\text{s}$
 - $s$ is the displacement of the object in $\text{m}$
+
+Kinematics assumes acceleration is constant. 
+
+Acceleration is not constant according to Newton's law of gravitation and Newton's second law of motion because as the objects move the distance between the object changes and thus the gravitational force changes and thus the acceleration changes.
+
+However, the kinematic equations can be used at discrete time intervals to account for the change in acceleration over time using numerical integration to approximate the changes in position and velocity over time.
+
+### Numerical Integration
+

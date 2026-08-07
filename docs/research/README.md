@@ -9,7 +9,7 @@
 - $m$ is the mass of the object
 - $r$ is the distance between the objects
 
-In a system with multiple objects in 3-dimensions: $F_i=\sum_{j \neq i}{G\frac{m_im_j}{r^2_{ij}}}\hat{r}_{ij}$
+In a system with multiple objects in 3-dimensions: $F_i=\sum_{j \neq i}{G\frac{m_im_j}{r^2_{ij}}\hat{r}_{ij}$
 
 ### Newton's Second Law of Motion
 **Newton's second law of motion** $F_{\text{net}}=ma$:

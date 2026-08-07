@@ -20,7 +20,7 @@ F_i=\sum_{j \neq i}{G\frac{m_im_j}{r^2_{ij}}\hat{r}_{ij}}
 - $m$ is the mass of the object in $\text{kg}$
 - $a$ is the acceleration of the object in $\text{m} \text{s}^{-1}$
 
-Newton's second law of motion can be used to determine the **acceleration** of the object: $a=\frac{F_{\text{net}}{m}$
+Newton's second law of motion can be used to determine the **acceleration** of the object: $a=\frac{F_{\text{net}}}{m}$
 ```math
 \begin{aligned}
     F_{\text{net}}&=ma \\

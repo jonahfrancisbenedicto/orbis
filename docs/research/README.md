@@ -5,7 +5,7 @@
 ### Newton's Law of Gravitation
 **Newton's law of gravitation** $F=G\frac{m_1m_2}{r^2}$:
 - $F$ is the force of gravity acting on the object
-- $G$ is the Newton's constant of gravitation $G=(6.67430 \pm 0.00015) \times 10^{-11} \text{m}^3 \text{kg}^{-1} \text{s}^{-2}$ [Source](https://physics.nist.gov/cuu/Constants/index.html)
+- $G$ is the Newton's constant of gravitation $G=(6.67430 \pm 0.00015) \times 10^{-11} \text{m}^3 \text{kg}^{-1} \text{s}^{-2}$ [Source](https://physics.nist.gov/cgi-bin/cuu/Value?bg|search_for=universal_in!)
 - $m$ is the mass of the object
 - $r$ is the distance between the objects
 
